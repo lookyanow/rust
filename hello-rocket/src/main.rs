@@ -2,9 +2,13 @@
 
 #[macro_use] extern crate rocket;
 
-#[get("/hello/<name>")]
-fn hello(name: String) -> String {
-    format!("Hello, {}!", name.as_str())
+#[get("/hello/<name>/<age>/<cool>")]
+fn hello(name: String, age: u8, cool: bool) -> String {
+    if cool {
+        format!("Cool: {}, age: {}", cool, age)
+    } else {
+        format!("Your name is: {}", name)
+    }
 }
 
 fn main() {
