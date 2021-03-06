@@ -1,6 +1,6 @@
 #[derive(Debug)]
 pub struct Person{
-    name: String, age: i32, children: i32,
+    name: String, age: i32, children: i32, fave_color: Color
 }
 
 impl Person{
@@ -22,6 +22,7 @@ fn main() {
         name: "Ivan".to_string(),
         age: 35, 
         children: 2,
+        fave_color: Color::Green,
     };
     // println!("Get person struct{}", p.print());
     println!("Get person struct{:?}", p);
